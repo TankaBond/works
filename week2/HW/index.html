@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="<viewport>"
+        content="widht=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    
+    <body>
+        <h1>Опросник для владельцев магических животных</h1>
+
+        <form method="post">
+            <label for="pet-name">Кличка питомца:</label>
+            <input type="text" id="pet-name" name="pet-name" required>
+        <br/>
+
+            <label for="owner-name">Имя владельца:</label>
+            <input type="text" id="owner-name" name="owner-name" required>
+        </br>
+            
+            <label for="email">Почта владельца:</label>
+            <input type="text" id="email" name="email" required>
+        </br>
+        
+        <label for="owner-phone">Номер телефона:</label>
+        <input type="tel" id="owner-phone" name="owner-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <br/>
+
+
+            <label for="pet-type">Порода питомца:</label>
+        <select id="pet-type" name="pet-type" required>
+            <option value="">Выберите</option>
+            <option value="dog">Собака</option>
+            <option value="cat">Кошка</option>
+            <option value="bird">Птица</option>
+            <option value="fish">Рыба</option>
+            <option value="other">Другое</option>
+        </select>
+    <br/>
+
+        <label for="pet-food">Чем питается:</label>
+    </br>
+        <input type="checkbox" name="pet-food" value="1" checked="checked"/>
+        Сухой корм </br>
+        <input type="checkbox" name="pet-food" value="2" checked="checked"/>
+        Влажный корм </br>
+        <input type="checkbox" name="pet-food" value="3" checked="checked"/>
+        Натуральный корм </br>
+
+        <label>Пол:</label>
+    <input type="radio" id="pet-gender-male" name="pet-gender" value="male" required>
+    <label for="pet-gender-male">Самец</label>
+    <input type="radio" id="pet-gender-female" name="pet-gender" value="female" required>
+    <label for="pet-gender-female">Самка</label>
+    <br/>  
+
+
+        <label>Комментарий владельца</label>
+</br>
+        <textarea name="comments" cols="50" rows="10"></textarea>
+</br>
+
+        <label>Фото питомца</label>
+        <input type="file">
+</br>
+</br>
+<input type="submit" value="Сохранить">
+</form>
+
+    </body>
+    </html>
