@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
     <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Block Page</title>
-    <link rel="stylesheet" href="normalize.css" />
+    <title>Layout</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet"
-    />
-    </head>
-
-    <body>
-    <header>
-        <h1 style="color: rgb(0, 0, 0); height: 20px">[Шапка страницы]</h1>
-    </header>
-    </body>
-
-
+</head>
+<body>
+    <div class="container">
+    <header class="header">[Шапка страницы]</header>
+    <div class="content">
+        <main class="main">
+        <div class="section">[Основная часть]</div>
+        <div class="inner-content">
+            <div class="box">[Ещё 1]</div>
+            <div class="box">[Ещё 2]</div>
+            <div class="box-wide">[Ещё 3]</div>
+        </div>
+        </main>
+        <aside class="sidebar">[Боковая область]</aside>
+    </div>
+    <footer class="footer">
+        <div class="footer-box">[Секция футера 1]</div>
+        <div class="footer-box">[Секция футера 2]</div>
+        <div class="footer-box">[Секция футера 3]</div>
+        <div class="footer-box">[Секция футера 4]</div>
+    </footer>
+    </div>
+</body>
 </html>
