@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header header"
+        "main main sidebar sidebar"
+        "footer footer footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    gap: 0;
+}
+
+/* Шапка */
+.header {
+    grid-area: header;
+    background-color: #dcdcdc;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Основная часть */
+.section {
+    grid-area: main;
+    background-color: #fffacc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.box {
+    background-color: #fde291;
+    padding: 20px;
+    text-align: center;
+}
+
+.box-wide {
+    grid-column: span 2; /* Эта секция занимает две колонки */
+}
+
+/* Боковая область */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #d7f5d0;
+    padding: 200px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Футер */
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    background-color: #dcdcdc;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.footer-box {
+    background-color: white;
+    padding: 20px;
+    flex: 1;
+    margin-right: 10px;
+    text-align: center;
+}
+
