@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+    width: 100%;
+}
+
+.container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Цвета для каждого элемента */
+.container div:nth-child(1) {
+    background-color: #98fb98; /* Зеленый */
+}
+
+.container div:nth-child(2) {
+    background-color: #ffeb84; /* Желтый */
+}
+
+.container div:nth-child(3) {
+    background-color: #00e5ee; /* Голубой */
+}
+
+.container div:nth-child(4) {
+    background-color: #d8bfd8; /* Фиолетовый */
+}
+
+.container div:nth-child(5) {
+    background-color: #98ff98; /* Салатовый */
+}
+
+.container div:nth-child(6) {
+    background-color: #ff8247; /* Оранжевый */
+}

@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr; /* Две колонки: основная и для sidebar */
+    grid-template-rows: auto 1fr; /* Строки для header и основного контента */
+    grid-gap: 0;
+    overflow: hidden; /* Отключаем скроллинг */
+}
+
+/* Sidebar — боковая панель */
+.sidebar {
+    grid-column: 1 / 2; /* Расположить в правой колонке */
+    grid-row: 1 / 3; /* Занять две строки: и header, и основной контент */
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh; /* Фиксированная высота для sidebar */
+}
+
+/* Логотип и заголовок WATCH */
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Отступ снизу от логотипа */
+}
+
+.sidebar .logo img {
+    margin-right: 10px;
+}
+
+.nav1, .nav2 {
+    margin-top: 60px; /* Отступ между заголовком WATCH и первыми ссылками */
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    color: #aaa;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.sidebar nav a img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar nav a:hover {
+    color: white;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px; /* Увеличиваем отступ сверху для создания большего расстояния */
+    margin-bottom: 20px; /* Отступ снизу для настроек */
+}
+
+.settings a {
+    display: flex;
+    align-items: center;
+    color: #aaa;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.settings a img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+/* Header — верхняя панель */
+.header {
+    grid-column: 2 / 3; /* Расположить в левой колонке */
+    grid-row: 1 / 2; /* В верхней строке */
+    background-image: url('./image/Rectangle.jpg');
+    background-size: cover; /* Чтобы изображение заполняло весь header */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Убираем повторение */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Элементы будут распределены: первый элемент прижат к левому краю, последний к правому, пространство между ними равномерно */
+    align-items: flex-start; /* Выровнять содержимое по верхней части */
+    flex-wrap: wrap; /* Позволяет переносить элементы */
+    position: relative; /* Для позиционирования .featured */
+    height: 350px; /* Задаем высоту header */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px; /* Выравниваем на какой высоте будет секция меню и иконок выше */
+}
+
+/* Добавляем стиль для ссылок внутри .nav-menu */
+.nav-menu a {
+    color: white; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+/* Flexbox для кнопок с иконками */
+.header-icons {
+    display: flex; /* Располагаем иконки в одну строку */
+    gap: 20px; /* Расстояние между иконками */
+    position: absolute; 
+    right: 20px; /* Прижимаем к правому краю */
+    top: 20px; /* Прижимаем к верху */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+/* Оформление кнопок с иконками */
+.icon {
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Указатель при наведении */
+    padding: 10px; /* Добавляем отступ для удобного нажатия */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img {
+    height: 24px; /* Сделали одинаковую высоту, а ширину убрали */
+}
+
+/* Featured блок на левом нижнем углу */
+.featured {
+    position: absolute;
+    bottom: 50px; /* Прижимаем к нижней части */
+    left: 20px; /* Прижимаем к левой части */
+    display: grid; /* Используем CSS Grid */
+    grid-template-rows: auto auto auto; /* Три строки: одна для заголовка, одна для описания, одна для кнопок */
+    row-gap: 20px; /* Устанавливаем расстояние между строками в 20px */
+    align-items: start; /* Выравниваем элементы по началу */
+}
+
+.featured h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+.featured p {
+    margin-bottom: 20px;
+}
+
+/* Flexbox для кнопок */
+.buttons {
+    display: flex; /* Располагаем кнопки в одну строку */
+    align-items: center; /* Центрируем кнопки по вертикали */
+    gap: 10px; /* Добавляем расстояние между кнопками */
+}
+
+/* Обе кнопки получат одинаковую высоту */
+.watch-now, .fav-btn {
+    height: 50px; /* Одинаковая высота для обеих кнопок */
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px; /* Закругление углов для обеих кнопок */
+}
+
+.watch-now {
+    padding: 20px 30px;
+    background-color: #6c63ff;
+    margin-right: 10px;
+}
+
+.fav-btn {
+    padding: 13px 13px;
+    background-color: #ffffff;
+    margin-right: 10px;
+}
+
+/* Основной контент */
+.container {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding: 20px;
+    background-color: #181818;
+    color: white;
+}
+
+.movie-card a {
+    text-decoration: none; /* Убираем подчеркивание */
+    display: block; /* Чтобы вся область изображения была кликабельной */
+}
+
+.trending {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки, каждая занимает 1/4 ширины */
+    gap: 15px; /* Отступы между колонками */
+    margin-top: -10px; /* Поднимаем секцию ближе к Header */
+    padding: 0; /* Убираем все внутренние отступы */
+}
+
+.movie-card img {
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.section-title {
+    grid-column: 1 / -1; /* Заголовок занимает всю ширину контейнера */
+    font-size: 24px;
+}
+
+/* Сетка для секции Continue Watching */
+.continue-watching {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряд */
+    gap: 20px; /* Отступы между карточками */
+    margin-top: 20px; /* Отступ сверху */
+    padding: 0 10px; /* Отступы по бокам контейнера */
+}
+
+.continue-watching .section-title {
+    grid-column: 1 / -1;
+    font-size: 24px;
+    margin-bottom: 10px; /* Отступ между заголовком и карточками */
+}
+
+.continue-watching .movie-card {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 250px;
+}
+
+.continue-watching .movie-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Адаптация для экранов с шириной до 1024px */
+@media (max-width: 1024px) {
+    .header {
+        height: 300px;
+    }
+    
+    .featured h1 {
+        font-size: 40px;
+    }
+
+    .header-icons {
+        gap: 10px;
+    }
+
+    .watch-now, .fav-btn {
+        padding: 10px 15px;
+    }
+
+    .trending {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .continue-watching {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптация для экранов с шириной до 768px */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        height: auto;
+    }
+
+    .header {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        height: auto;
+    }
+
+    .header-icons {
+        position: relative;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+    }
+
+    .container {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+
+    .trending {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .continue-watching {
+        grid-template-columns: 1fr;
+    }
+
+    .featured h1 {
+        font-size: 32px;
+    }
+
+    .header-icons {
+        margin-top: 10px;
+    }
+
+    .featured {
+        position: relative;
+        bottom: auto;
+    }
+
+    .watch-now, .fav-btn {
+        width: 100%;
+    }
+}
+
+/* Адаптация для экранов с шириной до 480px */
+@media (max-width: 480px) {
+    .header-icons {
+        gap: 10px;
+    }
+
+    .trending, .continue-watching {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar, .header, .container {
+        padding: 10px;
+    }
+
+    .featured h1 {
+        font-size: 24px;
+    }
+
+    .watch-now, .fav-btn {
+        padding: 10px 15px;
+    }
+
+    .featured {
+        bottom: 0;
+    }
+}
