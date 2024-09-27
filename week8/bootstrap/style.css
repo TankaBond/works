@@ -1,0 +1,49 @@
+/* Основные стили */
+html, body {
+    height: 100%; /* Устанавливаем высоту 100% для всей страницы */
+    margin: 0;
+    overflow-x: hidden; /* Убираем горизонтальный скролл */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Контейнер растягивается на всю высоту экрана */
+}
+
+.custom-bg-color {
+    background-color: #92abac; /* Задаём серый фон */
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 2rem 0;
+    margin-top: auto; /* Футер будет внизу, если контента недостаточно */
+}
+
+.card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center; /* Центрируем текст */
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем текст по вертикали */
+    align-items: center;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center; /* Центрируем кнопку */
+}
+
+.card:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}

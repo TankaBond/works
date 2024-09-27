@@ -1,0 +1,130 @@
+@import "reset";
+@import "fonts"; /* Подключаем файл со шрифтами */
+
+/* Основные стили */
+body {
+    font-family: 'RobotoSlab', serif;
+    font-size: 16px;
+    margin: 0;
+    color: #000;
+}
+
+.container {
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили для header */
+.header {
+    padding-top: 90px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo-image {
+        max-width: 150px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+
+        &-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        &-text {
+            font-family: 'IntroBlackAlt', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #5222d0;
+        }
+    }
+}
+
+/* Стили для main */
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+
+    &__content {
+        max-width: 430px;
+    }
+
+    &__title {
+        font-family: 'IntroBlackAlt', sans-serif;
+        font-size: 60px;
+        line-height: 1.1;
+        color: #000;
+    }
+
+    &__description {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-top: 10px;
+        color: #333;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        background-color: #5222d0;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 16px 32px;
+        margin-top: 30px;
+        cursor: pointer;
+
+        &-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        &-text {
+            font-family: 'IntroBlackAlt', sans-serif;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__image {
+        max-width: 600px;
+    }
+}
+
+/* Стили для footer */
+.footer {
+    padding: 40px 0;
+
+    &__menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    &__item {
+        margin: 0 20px;
+    }
+
+    &__link {
+        font-size: 18px;
+        font-weight: 300;
+        color: #5222d0;
+        text-decoration: none;
+    }
+}
